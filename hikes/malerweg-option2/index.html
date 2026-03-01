@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading…</title>
+  <link rel="stylesheet" href="../_shared/theme.css">
+</head>
+<body>
+<script>
+window.TRIP = {
+
+  /* ── Meta ────────────────────────────────────────────────── */
+  title:      "Malerweg · Etape 1–3",
+  region:     "Sächsische Schweiz, Sachsen",
+  badge:      "🥾⚡ 3 vandredage · Elbilstur",
+  dateRange:  "Ons. 1. april – Søn. 6. april 2025",
+  difficulty: "Moderat · Ikke eksponeret",
+
+  /* ── Cover stats ─────────────────────────────────────────── */
+  stats: [
+    { value: "6",       label: "Dage"       },
+    { value: "3",       label: "Etaper"     },
+    { value: "~36 km",  label: "Vandring"   },
+    { value: "5",       label: "Nætter"     },
+  ],
+
+  /* ── Dage ────────────────────────────────────────────────── */
+  days: [
+
+    /* ── Dag 1: Kørsel til Altendorf ── */
+    {
+      id:            "dag1",
+      type:          "drive",
+      date:          "Dag 1 · Onsdag 1. april",
+      navLabel:      "Ons 1/4",
+      overviewIcon:  "🚗",
+      overviewLabel: "Kørsel til Altendorf",
+
+      title:    "Aarhus → Altendorf",
+      subtitle: "~820 km · ca. 10 timer inkl. ladestop",
+      pills:    ["🚗 Afgang 07:30", "⚡ 3 ladestop", "Ankomst ~17:30"],
+
+      description: "Lang men velforberedt køretur i elbil med tre planlagte Supercharger-stop. Bilen parkeres i Altendorf – præcis dér, hvor vandreturen slutter på dag 4 – så der ikke er billogistik til sidst. Ved ankomst er der tid til en aftentur op på Adamsberg Bakke med fantastisk udsigt mod Schrammsteine og Lilienstein.",
+
+      timeline: [
+        { time: "07:30", label: "Afgang Aarhus",                       detail: "E45 sydpå mod Kolding og Flensburg" },
+        { time: "10:30", label: "⚡ Supercharger Hamburg",              detail: "Oplad 25–30 min · morgenkaffe · kør videre ca. 11:00" },
+        { time: "13:30", label: "⚡ Supercharger Berlin",               detail: "Oplad 25–30 min · frokostpause · kør videre ca. 14:00" },
+        { time: "16:30", label: "⚡ Supercharger Dresden Kesselsdorf",  detail: "Kort oplad 15–20 min · kør videre ca. 16:50" },
+        { time: "17:30", label: "Ankomst Altendorf 🏠",                 detail: "Parker bilen – den venter her til etape 3 er i mål dag 4", final: true },
+      ],
+
+      tip: "🌄 Ved ankomst: tag en kort aftentur op på Adamsberg Bakke (1,1 km fra Altendorf) – udsigten mod Schrammsteine, Falkenstein og Lilienstein er særligt smuk i aftensolen. Perfekt måde at lande i landskabet på.",
+
+      accommodation: {
+        icon: "🏡",
+        name: "Gasthof Erbgericht Altendorf",
+        desc: "Vandrervenlig Gasthof direkte i landsbyen. Bus 260 stopper ved døren. God lokal mad og tidlig sengetid inden vandrestart.",
+      },
+
+      links: [
+        { label: "Supercharger Hamburg",             url: "https://www.tesla.com/supercharger", blue: true },
+        { label: "Supercharger Berlin",              url: "https://www.tesla.com/supercharger", blue: true },
+        { label: "Supercharger Dresden Kesselsdorf", url: "https://www.tesla.com/supercharger", blue: true },
+      ],
+    },
+
+    /* ── Dag 2: Etape 1 ── */
+    {
+      id:            "dag2",
+      type:          "hike",
+      date:          "Dag 2 · Torsdag 2. april",
+      navLabel:      "Tor 2/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 1 · Liebethal → Wehlen",
+
+      title:    "Etape 1 · Liebethal → Stadt Wehlen",
+      subtitle: "Romantiske kløftdale og Caspar David Friedrichs stenport",
+      pills:    ["11,5 km", "+110 hm", "3,5 timer"],
+
+      images: [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Malerweg%2C_Germany_20.jpg/320px-Malerweg%2C_Germany_20.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Stadt_Wehlen_Elbe.jpg/320px-Stadt_Wehlen_Elbe.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Br%C3%BCcke_%C3%BCber_die_Wesenitz_Liebethal.jpg/320px-Br%C3%BCcke_%C3%BCber_die_Wesenitz_Liebethal.jpg",
+      ],
+
+      description: "En blid og naturskøn åbning på Malerweg. Tag tidlig bus fra Altendorf til Bad Schandau, S-Bahn til Pirna og bus til Liebethal. Ruten følger Wesenitz-dalen med skov og klippevægge, passerer Richard Wagner-mindesmærket og slutter ved den hyggelige Elbby Stadt Wehlen – ankomst ca. 13:00. God tid til eftermiddagsaktiviteter.",
+
+      highlights: [
+        "Bus Altendorf → Bad Schandau → S-Bahn Pirna → Bus G/L → Liebethal (Sachsen-Ticket)",
+        "Liebethaler Grund – idyllisk kløftedal langs Wesenitz-åen",
+        "Richard Wagner-mindesmærket fra 1933 – han komponerede Lohengrin her",
+        "Uttewalder Felsentor – stenport i smuk mosklædt kløft, Caspar David Friedrich tilbragte dage her",
+        "Gasthaus Waldidylle direkte ved Felsentor – lokale vildretter",
+        "Stadt Wehlen med botanisk have og lokalmuseum ved Elben",
+        "Eftermiddag: Miniaturpark 'Die Kleine Sächsische Schweiz' i Dorf Wehlen (2,6 km, 1 time)",
+        "Wilkeaussicht – panorama ned over Elben (1 km, 15 min fra Wehlen)",
+      ],
+
+      tip: "💡 Start tidligt – afgange fra Altendorf ca. 07:30–08:00. Etapen slutter allerede ca. 13:00, så der er god tid til Miniaturparken eller Wilkeaussicht om eftermiddagen.",
+
+      accommodation: {
+        icon: "🏡",
+        name: "Hotel/Gasthof i Stadt Wehlen",
+        desc: "Hyggelig flodby med restauranter og is ved Elben. Book vandrervenlig host via malerweg.de · S-Bahn-stop direkte i byen.",
+      },
+
+      links: [
+        { label: "Etape 1 – Malerweg",                   url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-1" },
+        { label: "Miniaturpark Die Kleine Sächs. Schweiz", url: "http://www.kleine-saechsische-schweiz.de/" },
+        { label: "Busplaner VVO",                          url: "https://www.vvo-online.de/de" },
+      ],
+    },
+
+    /* ── Dag 3: Etape 2 ── */
+    {
+      id:            "dag3",
+      type:          "hike",
+      date:          "Dag 3 · Fredag 3. april",
+      navLabel:      "Fre 3/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 2 · Bastei",
+
+      title:    "Etape 2 · Stadt Wehlen → Bastei → Hohnstein",
+      subtitle: "Den klassiske udsigtsdag – start TIDLIGT!",
+      pills:    ["10,9 km", "+499 hm", "4,5–5 timer"],
+
+      images: [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rathen_und_Elbsandsteingebirge_asv2022-08_img04.jpg/330px-Rathen_und_Elbsandsteingebirge_asv2022-08_img04.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rathen_und_Elbsandsteingebirge_asv2022-08_img24.jpg/330px-Rathen_und_Elbsandsteingebirge_asv2022-08_img24.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hohnstein1.jpg/330px-Hohnstein1.jpg",
+      ],
+
+      description: "Dagens store oplevelse er Basteibrücke – 193 m over Elben og Tysklands mest fotograferede udsigtspunkt. Start fra Wehlen senest 08:30 for at nå Bastei i morgenstillhed, inden turistbusserne ankommer fra ca. 10. Ruten fortsætter ned ad Schwedenlöcher-kløften, forbi Amselsee og op til maleriske Hohnstein.",
+
+      highlights: [
+        "Afgang fra Wehlen senest 08:30 – gå direkte fra B&B",
+        "Steinerner Tisch – historisk skovrestaurant fra 1710, morgenpause med udsigt",
+        "Basteibrücke – gratis adgang, 193 m over Elben, Tysklands ikoniske udsigtspunkt",
+        "Felsenburg Neurathen – klippeborgruin ved Bastei (tjek om åben på malerweg.de/news)",
+        "Schwedenlöcher – alternativ, mere eventyrlig nedstigning i mosklædte smalgange",
+        "Kurort Rathen med Amselsee og Amselfall-vandfaldet",
+        "Hockstein – panorama ned i 115 m dybt Polenztal, middelalderborg fra 1821",
+        "Wolfsschlucht ned til Polenztal, op ad Schindergraben til Hohnstein",
+        "Eftermiddag: Burg Hohnstein og Kasper-museum i turistinfoen",
+      ],
+
+      tip: "⏰ Start <strong>inden kl. 09</strong> – Bastei er ekstremt populær og turistbusserne ankommer fra ca. 10. Morgenlyset er smukt og platformene næsten tomme tidligt.",
+
+      accommodation: [
+        { icon: "🏨", name: "Hotel zur Aussicht, Hohnstein", desc: "Enkelt og rent, god lokal mad. Book tidligt – populært." },
+        { icon: "🏰", name: "Burg Hohnstein (hostel)",       desc: "Historisk overnatning direkte i borgkomplekset – alle aldre velkomne." },
+      ],
+
+      links: [
+        { label: "Etape 2 – Malerweg",   url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-2" },
+        { label: "Felsenbühne Rathen",   url: "http://www.felsenbuehne-rathen.de" },
+        { label: "Steinerner Tisch",     url: "https://www.steinerner-tisch.info/" },
+      ],
+    },
+
+    /* ── Dag 4: Etape 3 → Altendorf ── */
+    {
+      id:            "dag4",
+      type:          "hike",
+      date:          "Dag 4 · Lørdag 5. april",
+      navLabel:      "Lør 5/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 3 → Altendorf 🚗",
+
+      title:    "Etape 3 · Hohnstein → Brandaussicht → Altendorf",
+      subtitle: "Sächsische Schweiz' altan – og bilen venter i mål",
+      pills:    ["14 km", "+449 hm", "5,5 timer", "🚗 Bil i mål"],
+
+      images: [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Brandaussicht.jpg/320px-Brandaussicht.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Nationalpark_S%C3%A4chsische_Schweiz_Lindigtblick_lub_2024-10-26.jpg/320px-Nationalpark_S%C3%A4chsische_Schweiz_Lindigtblick_lub_2024-10-26.jpg",
+      ],
+
+      description: "Dagens og turens længste etape – men også en af de smukkeste. Fra Hohnstein ned til Bärengarten og op gennem skoven til Brandaussicht, kaldet 'Sächsische Schweiz' altan'. 800 trapper ned i Tiefer Grund, op til den lille landsby Waitzdorf med spektakulære udsigtspunkter, og til sidst ned ad det vilde Kohlichtgraben til Altendorf – præcis dér, bilen holder og venter.",
+
+      highlights: [
+        "Afgang Hohnstein ca. 08:00–08:30",
+        "Ned til Bärengarten – maleriske ruiner af gammelt vildtreservat",
+        "Brandaussicht – regionens smukkeste panorama, Nationalpark Informationsstelle åben 10–17 (gratis)",
+        "800 trapper ned i Tiefer Grund-kløften – dramatisk!",
+        "Waitzdorf – 50 indb., direkte i nationalparkens kernezone",
+        "Waitzdorfer Aussichten – spektakulære udsigtspunkter direkte ved stien",
+        "Kohlichtgraben – vild og romantisk skovdal langs bæk",
+        "Kohlmühle – fredet linoleum-fabriksruin fra 1800-tallet",
+        "Ankomst Altendorf ca. 14:00 – hent bilen og tag en kold øl 🚗🍺",
+      ],
+
+      tip: "🌄 Brandaussicht nås midt på formiddagen – perfekt til frokostpause med udsigt. Detour til Adamsberg Bakke (1,1 km) er oplagt om eftermiddagen – udsigten mod Schrammsteine er endnu bedre, nu man kender landet.",
+
+      accommodation: {
+        icon: "🏡",
+        name: "Gasthof Erbgericht Altendorf",
+        desc: "Velkendte rammer fra ankomstnatten. God aftensmad og tidlig sengetid inden lang hjemkørsel søndag.",
+      },
+
+      links: [
+        { label: "Etape 3 – Malerweg",           url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-3" },
+        { label: "Nationalpark Infocenter Brand", url: "https://www.nationalparkzentrum-saechsische-schweiz.de/en.html" },
+      ],
+    },
+
+    /* ── Dag 5: Hjemkørsel → Aarhus ── */
+    {
+      id:            "dag5",
+      type:          "drive",
+      date:          "Dag 5 · Søndag 6. april",
+      navLabel:      "Søn 6/4",
+      overviewIcon:  "🚗",
+      overviewLabel: "Hjemtur · Aarhus",
+
+      title:    "Altendorf → Aarhus",
+      subtitle: "~820 km · ca. 9,5 time inkl. ladestop",
+      pills:    ["🚗 Afgang 08:00", "⚡ 2 ladestop", "Hjemme ~17:30"],
+
+      description: "Lang men velfortjent hjemkørsel efter tre fantastiske vandredage. To planlagte ladestop – morgenkaffe i Dresden og frokostpause i Hamburg – gør turen komfortabel. Søndag eftermiddag hjemme giver god tid til at pakke ud og lande inden hverdagen.",
+
+      timeline: [
+        { time: "08:00", label: "Afgang Altendorf",                      detail: "A17 mod Dresden" },
+        { time: "08:20", label: "⚡ Supercharger Dresden Kesselsdorf",   detail: "Oplad 20–25 min · morgenkaffe · kør videre ca. 08:45" },
+        { time: "11:30", label: "⚡ Supercharger Hamburg",               detail: "Oplad 25–30 min · frokostpause · kør videre ca. 12:00" },
+        { time: "13:30", label: "Grænsen Flensburg / Padborg",           detail: "🇩🇰 Velkommen tilbage til Danmark" },
+        { time: "15:30", label: "Ankomst Aarhus 🏠",                     detail: "God eftermiddag til at pakke ud og lande inden hverdagen", final: true },
+      ],
+
+      info: "✅ <strong>Afgang 08:00 fra Altendorf</strong> giver en behagelig hjemkørsel med to gode pauser og hjemkomst midt på eftermiddagen – masser af overskud til at nyde resten af søndagen.",
+    },
+
+  ],
+
+  /* ── Praktisk ────────────────────────────────────────────── */
+  practical: {
+
+    logistics: [
+      {
+        category: "Transport",
+        title:    "Elbil, bus og tog",
+        icon:     "🚂",
+        items: [
+          { icon: "🅿️", label: "Parkering i Altendorf",              detail: "Bilen parkeres dag 1 og hentes i mål dag 4 – ingen billogistik undervejs" },
+          { icon: "🚌", label: "Bus Altendorf → Bad Schandau",       detail: "Bus 260, stop 'Altendorf Erbgericht' · ca. 15 min" },
+          { icon: "🚂", label: "S-Bahn S1: Bad Schandau → Pirna",   detail: "Ca. 25 min · kører langs Elben" },
+          { icon: "🚌", label: "Bus G/L: Pirna → Liebethal Grund",  detail: "Ca. 10 min · Sachsen-Ticket gælder" },
+          { icon: "🎫", label: "Sachsen-Ticket",                     detail: "~35 € for op til 5 pers. · køb i DB Navigator-appen" },
+          { icon: "⚡", label: "Supercharger Dresden Kesselsdorf",   detail: "Bruges dag 1 og dag 5 · 15–25 min oplad" },
+          { icon: "⚡", label: "Supercharger Hamburg",               detail: "Bruges dag 1 og dag 5 · 25–30 min oplad" },
+        ],
+      },
+    ],
+
+    checklist: [
+      "Book overnatning: Altendorf (2 nætter), Stadt Wehlen, Hohnstein",
+      "Sachsen-Ticket i DB Navigator-appen",
+      "Tjek busstider Altendorf → Bad Schandau → Pirna → Liebethal (morgenafgang dag 2)",
+      "Start Bastei-dagen (etape 2) senest 08:30 – turistbusserne ankommer fra kl. 10",
+      "Tjek status på Felsenburg Neurathen: malerweg.de/news (var lukket 2024)",
+      "Vandtætte støvler med godt greb – mange stentrapper",
+      "Mapy.cz offline – dårligt mobilsignal i kløfterne",
+      "Kontanter til Gasthöfe, færge i Rathen og skovrestauranter",
+      "Lette lag – april: 6–14°C, kan skifte hurtigt",
+      "Tjek Supercharger-tilgængelighed i Tesla-appen inden afgang",
+    ],
+
+    links: [
+      { category: "Malerweg", title: "Etape 1 – Liebethal → Wehlen",   url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-1", urlLabel: "saechsische-schweiz.de" },
+      { category: "Malerweg", title: "Etape 2 – Wehlen → Hohnstein",   url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-2", urlLabel: "saechsische-schweiz.de" },
+      { category: "Malerweg", title: "Etape 3 – Hohnstein → Altendorf",url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/stages-of-the-malerweg-trail/stage-3", urlLabel: "saechsische-schweiz.de" },
+      { category: "Officiel",  title: "Malerweg – nyheder og status",   url: "https://www.saechsische-schweiz.de/malerweg/en/plan-your-trip/news",                                   urlLabel: "saechsische-schweiz.de" },
+      { category: "Transport", title: "DB – tog og Sachsen-Ticket",     url: "https://www.bahn.de",                                                                                   urlLabel: "bahn.de"                },
+      { category: "Transport", title: "VVO – busplaner",                url: "https://www.vvo-online.de/de",                                                                          urlLabel: "vvo-online.de"          },
+      { category: "Wikipedia", title: "Basteibrücke",                   url: "https://en.wikipedia.org/wiki/Bastei",                                                                   urlLabel: "en.wikipedia.org"       },
+      { category: "Wikipedia", title: "Saxon Switzerland NP",           url: "https://en.wikipedia.org/wiki/Saxon_Switzerland_National_Park",                                         urlLabel: "en.wikipedia.org"       },
+    ],
+  },
+
+  /* ── Kort ────────────────────────────────────────────────── */
+  map: {
+    label: "Ruteoverblik",
+    title: "Kort — Malerweg Etape 1–3",
+
+    gpxRoutes: [
+      { file: "routes/dag2.gpx", color: "#2d6630", label: "Etape 1 · Liebethal → Stadt Wehlen" },
+      { file: "routes/dag3.gpx", color: "#1a3a8a", label: "Etape 2 · Stadt Wehlen → Bastei → Hohnstein" },
+      { file: "routes/dag4.gpx", color: "#8a3a1a", label: "Etape 3 · Hohnstein → Altendorf" },
+    ],
+
+    waypoints: [
+      { id: "w1",  lat: 51.1650, lng: 13.7370, type: "waypoint", label: "Dresden Kesselsdorf",      desc: "Supercharger · Bruges dag 1 og dag 5"                          },
+      { id: "w2",  lat: 50.9870, lng: 13.9630, type: "start",    label: "Liebethal",                desc: "Start etape 1 · Richard Wagner-mindesmærket"                    },
+      { id: "w3",  lat: 50.9720, lng: 14.0520, type: "waypoint", label: "Uttewalder Felsentor",     desc: "Ikonisk stenport · Caspar David Friedrich"                      },
+      { id: "w4",  lat: 50.9640, lng: 14.1050, type: "hotel",    label: "Stadt Wehlen",             desc: "Overnat dag 2 · hyggelig Elbby"                                },
+      { id: "w5",  lat: 50.9647, lng: 14.0763, type: "waypoint", label: "Basteibrücke",             desc: "193 m over Elben · Tysklands ikoniske udsigtspunkt"             },
+      { id: "w6",  lat: 50.9580, lng: 14.0800, type: "waypoint", label: "Kurort Rathen",            desc: "Amselsee · Felsenbühne teater"                                  },
+      { id: "w7",  lat: 50.9720, lng: 14.1090, type: "waypoint", label: "Hockstein",               desc: "Panorama over 115 m dybt Polenztal"                             },
+      { id: "w8",  lat: 50.9770, lng: 14.1010, type: "hotel",    label: "Hohnstein",               desc: "Overnat dag 3 · Burg Hohnstein"                                 },
+      { id: "w9",  lat: 50.9540, lng: 14.1520, type: "waypoint", label: "Brandaussicht",           desc: "'Sächsische Schweiz' altan' · panorama over nationalparken"      },
+      { id: "w10", lat: 50.9580, lng: 14.1600, type: "waypoint", label: "Waitzdorf",               desc: "50 indb. · direkte i nationalparkens kernezone"                  },
+      { id: "w11", lat: 50.9480, lng: 14.1750, type: "hotel",    label: "Altendorf (parkering)",   desc: "Bil parkeret dag 1 · Hentes i mål dag 4 🚗"                     },
+    ],
+  },
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  footer: {
+    icon:     "🥾",
+    subtitle: "Malerweg · Etape 1–3 · 1.–6. april 2025",
+    detail:   "Aarhus → Altendorf → Liebethal → Wehlen → Hohnstein → Altendorf → Aarhus",
+  },
+
+};
+</script>
+<script src="../_shared/renderer.js"></script>
+</body>
+</html>

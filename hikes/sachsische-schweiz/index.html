@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading…</title>
+  <link rel="stylesheet" href="../_shared/theme.css">
+</head>
+<body>
+<script>
+window.TRIP = {
+
+  /* ── Meta ────────────────────────────────────────────────── */
+  title:      "Sächsische Schweiz",
+  region:     "Sachsen, Tyskland",
+  badge:      "🥾⚡ 3 vandredage · Elbilstur",
+  dateRange:  "Ons. 1. april – Søn. 5. april 2025",
+  difficulty: "Moderat sværhedsgrad",
+
+  // coverImage: "images/cover.jpg",
+
+  /* ── Cover stats ─────────────────────────────────────────── */
+  stats: [
+    { value: "5",      label: "Dage"     },
+    { value: "3",      label: "Etaper"   },
+    { value: "~45 km", label: "Vandring" },
+    { value: "4",      label: "Nætter"   },
+  ],
+
+  /* ── Dage ────────────────────────────────────────────────── */
+  days: [
+
+    /* ── Dag 1: Kørsel til Wehlen ── */
+    {
+      id:            "dag1",
+      type:          "drive",
+      date:          "Dag 1 · Onsdag 1. april",
+      navLabel:      "Ons 1/4",
+      overviewIcon:  "🚗",
+      overviewLabel: "Kørsel til Wehlen",
+
+      title:    "Aarhus → Stadt Wehlen",
+      subtitle: "~790 km · ca. 9 timer inkl. ladestop",
+      pills:    ["🚗 Afgang 08:00", "⚡ 3 ladestop", "Ankomst ~17:45"],
+
+      description: "Lang men velforberedt køretur i elbil med tre planlagte Supercharger-stop. Bilen parkeres i Königstein hele ugen, så familien er fri til at vandre punkt-til-punkt uden logistikbesvær.",
+
+      timeline: [
+        { time: "08:00", label: "Afgang Aarhus",                    detail: "Tag E45 sydpå mod Kolding og Flensburg" },
+        { time: "10:45", label: "⚡ Supercharger Hamburg",           detail: "Oplad 25–30 min · morgenkaffe · kør videre ca. 11:15" },
+        { time: "13:45", label: "⚡ Supercharger Berlin",            detail: "Oplad 25–30 min · frokostpause · kør videre ca. 14:30" },
+        { time: "16:15", label: "⚡ Supercharger Dresden Kesselsdorf",detail: "Kort oplad 15–20 min · kør videre ca. 16:35" },
+        { time: "17:10", label: "Ankomst Stadt Wehlen",              detail: "Sæt familien af ved B&B – kør til Königstein P+R (~10 km)" },
+        { time: "17:30", label: "Parkér ved Königstein P+R Bahnhof", detail: "Gratis · Ingen tidsbegrænsning · S-Bahn tilbage til Wehlen (~10 min)" },
+        { time: "17:45", label: "Check ind – B&B Wehlen 🏠",         detail: "God aften og tidlig sengetid inden vandredag 1", final: true },
+      ],
+
+      tip: "💡 Bilen står trygt i Königstein hele turen – I slipper for al billogistik under vandringen. S-Bahn S1 kører hver 30. min og tager ~10 min til Wehlen.",
+
+      accommodation: {
+        icon: "🏡",
+        name: "B&B i Stadt Wehlen",
+        desc: "Book i god tid – god base for etape 1, og I går ud ad døren direkte på ruten.",
+      },
+
+      links: [
+        { label: "Supercharger Hamburg",  url: "https://www.tesla.com/supercharger", blue: true },
+        { label: "S-Bahn S1 – DB",        url: "https://www.bahn.de", blue: true },
+      ],
+    },
+
+    /* ── Dag 2: Etape 1 ── */
+    {
+      id:            "dag2",
+      type:          "hike",
+      date:          "Dag 2 · Torsdag 2. april",
+      navLabel:      "Tor 2/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 1 · Bastei",
+
+      title:    "Etape 1 · Wehlen → Bastei → Hohnstein",
+      subtitle: "Vandrestart · Den klassiske åbning",
+      pills:    ["13–15 km", "450–600 hm", "4–5 timer"],
+
+      images: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Rathen_und_Elbsandsteingebirge_asv2022-08_img04.jpg/330px-Rathen_und_Elbsandsteingebirge_asv2022-08_img04.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Rathen_und_Elbsandsteingebirge_asv2022-08_img24.jpg/330px-Rathen_und_Elbsandsteingebirge_asv2022-08_img24.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Hohnstein1.jpg/330px-Hohnstein1.jpg',
+      ],
+
+      description: "Første vandredag sætter tonen med to absolutte højdepunkter: Basteibrücke og Schwedenlöcher. I går ud ad døren fra B&B Wehlen – ingen transport nødvendig. Fra Stadt Wehlen ved Elben stiger stien op mod plateauet, og broen åbenbarer sig med panoramaudsigt over hele Elb-dalen. Derefter ned i Schwedenlöcher-kløftens smalle, fugtige sandstenstrin og nordpå til Hohnstein.",
+
+      highlights: [
+        "Afgang direkte fra B&B Wehlen ca. 08:30–09:00 – ingen transport",
+        "Skovsti opad mod Basteibrücke – 76,5 m lang sandstenskonstruktion fra 1851",
+        "Neurathen klippeborg-ruiner med udsigt over Elb-dalen",
+        "Ned i Schwedenlöcher – smal, dramatisk kløft",
+        "Plateau-vandring nordpå mod Hohnstein",
+        "Ankomst Hohnstein ca. 13:30–15:00",
+      ],
+
+      tip: "💡 Gå til Bastei <strong>inden kl. 9</strong> – morgenlyset er smukt og turistbusserne fra Dresden er ikke ankommet endnu.",
+
+      accommodation: [
+        { icon: "🏨", name: "Hotel zur Aussicht, Hohnstein",  desc: "Enkelt og rent. God lokal mad. Book tidligt – populært." },
+        { icon: "🏰", name: "Burg Hohnstein",                 desc: "Overnat på borgkomplekset. Unik historisk atmosfære." },
+      ],
+
+      links: [
+        { label: "Om Bastei",    url: "https://en.wikipedia.org/wiki/Bastei" },
+        { label: "Om Hohnstein", url: "https://en.wikipedia.org/wiki/Hohnstein,_Saxony" },
+      ],
+    },
+
+    /* ── Dag 3: Etape 2 ── */
+    {
+      id:            "dag3",
+      type:          "hike",
+      date:          "Dag 3 · Fredag 3. april",
+      navLabel:      "Fre 3/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 2 · Schramm",
+
+      title:    "Etape 2 · Hohnstein → Schrammsteine → Bad Schandau",
+      subtitle: "Turens hårdeste og mest spektakulære dag",
+      pills:    ["14–16 km", "600–700 hm", "5–6 timer", { text: "⚠ lidt eksponeret", warn: true }],
+
+      images: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Affensteine.jpg/330px-Affensteine.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Schrammsteine2.jpg/330px-Schrammsteine2.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bad_schandau.jpg/330px-Bad_schandau.jpg',
+      ],
+
+      description: "Dagens rute er turens klare højdepunkt. Fra Hohnstein østpå ind i det vildere Affensteine-område og videre langs den dramatiske Schrammsteine-kæde – en serie af fritstående sandstensrygge med smalle, lettere eksponerede klippepassager. Schrammsteinaussicht byder på 360°-udsigt over Elb-dalen og ind i Böhmisk Schweiz.",
+
+      highlights: [
+        "Afgang Hohnstein ca. 08:30",
+        "Hohnstein → Affensteine-klipperne",
+        "Ind på Schrammsteine-kæden – smalle rygge",
+        "Schrammsteinaussicht – 360° panorama, udsigt til Tjekkiet på klare dage",
+        "Nedstigning mod Elben og Bad Schandau",
+        "Ankomst ca. 14:30–15:30 – god eftermiddag til spa og hvile",
+      ],
+
+      tip: "🌄 Medbring ekstra lag – det blæser på ryggen. På klare aprilsdage kan man se langt ind over den tjekkiske del af nationalparken.",
+
+      accommodation: [
+        { icon: "🛁", name: "Hotel Elbresidenz ★★★★, Bad Schandau", desc: "Spa og pool med Elb-udsigt. Fortjent efter turens hårdeste dag." },
+        { icon: "🏨", name: "Hotel Lindenhof, Bad Schandau",         desc: "Rolig og klassisk. God restaurant, centralt beliggende." },
+      ],
+
+      links: [
+        { label: "Om Schrammsteine", url: "https://en.wikipedia.org/wiki/Schrammsteine" },
+        { label: "Om Bad Schandau",  url: "https://en.wikipedia.org/wiki/Bad_Schandau" },
+      ],
+    },
+
+    /* ── Dag 4: Etape 3 ── */
+    {
+      id:            "dag4",
+      type:          "hike",
+      date:          "Dag 4 · Lørdag 4. april",
+      navLabel:      "Lør 4/4",
+      overviewIcon:  "🥾",
+      overviewLabel: "Etape 3 → Königstein",
+
+      title:    "Etape 3 · Bad Schandau → Kuhstall → Königstein",
+      subtitle: "Grand finale – ender ved bilen",
+      pills:    ["13–15 km", "450–550 hm", "4–5 timer"],
+
+      images: [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Aerial_photo_of_Festung_K%C3%B6nigstein%2C_October_2008.jpg/330px-Aerial_photo_of_Festung_K%C3%B6nigstein%2C_October_2008.jpg',
+      ],
+
+      description: "Den afsluttende etape kombinerer nationalparkens roligere indre med en stærk finisher. Fra Bad Schandau op i Kirnitzschtal-dalen og videre til Kuhstall – en enorm naturlig sandstensklippebue der i sin tid fungerede som klippeborg under Trediveårskrigen. Ruten ender direkte ved den parkerede bil i Königstein.",
+
+      highlights: [
+        "Afgang Bad Schandau ca. 08:30",
+        "Op i Kirnitzschtal-dalen",
+        "Kuhstall – naturlig klippebue og middelalder-klippeborg",
+        "Gohrisch bordbjerget – åben udsigt sydpå",
+        "Nedstigning mod Königstein",
+        "Ankomst Königstein ca. 13:30–14:30 🎉",
+        "Bil hentes ved P+R Bahnhof – kør til hotellet i Königstein by",
+      ],
+
+      tip: "🏰 Har I overskud: Festung Königstein er åben 09–18 (~10€/person) – en perfekt afslutning med udsigt over hele Elb-dalen.",
+
+      accommodation: {
+        icon: "🏨",
+        name: "Hotel i Königstein by",
+        desc: "Tæt på P+R og stationen. Hotel Zur Sächsischen Schweiz eller lign.",
+      },
+
+      links: [
+        { label: "Om Kuhstall",        url: "https://en.wikipedia.org/wiki/Kuhstall_(rock_formation)" },
+        { label: "Königstein Festung", url: "https://en.wikipedia.org/wiki/K%C3%B6nigstein_Fortress" },
+      ],
+    },
+
+    /* ── Dag 5: Hjemkørsel ── */
+    {
+      id:            "dag5",
+      type:          "drive",
+      date:          "Dag 5 · Søndag 5. april",
+      navLabel:      "Søn 5/4",
+      overviewIcon:  "🚗",
+      overviewLabel: "Hjem til Aarhus",
+
+      title:    "Königstein → Aarhus",
+      subtitle: "~790 km · ca. 9 timer inkl. ladestop",
+      pills:    ["🚗 Afgang 10:00", "⚡ 3 ladestop", "Hjemme ~19:30–20:00"],
+
+      description: "God morgenmad inden afgang. Bilen hentes ved P+R Bahnhof i Königstein. Tre planlagte Supercharger-stop giver naturlige pauser på vejen hjem.",
+
+      timeline: [
+        { time: "10:00", label: "Afgang Königstein",                  detail: "Hent bilen ved P+R Bahnhof – god morgenmad inden" },
+        { time: "10:25", label: "⚡ Supercharger Dresden Kesselsdorf", detail: "Oplad 20–25 min · kør videre ca. 10:50" },
+        { time: "13:15", label: "⚡ Supercharger Berlin",              detail: "Frokost + oplad 25–30 min · kør videre ca. 14:00" },
+        { time: "16:30", label: "⚡ Supercharger Hamburg",             detail: "Kaffe + oplad 20–25 min · kør videre ca. 16:55" },
+        { time: "19:45", label: "Ankomst Aarhus 🏠",                  detail: "God aften til at pakke ud og lande inden hverdagen", final: true },
+      ],
+
+      info: "✅ <strong>Søndag er en god hjemkørselsdag</strong> – afgang kl. 10 giver tid til god morgenmad og undgår myldretid i Hamburg.",
+    },
+
+  ],
+
+  /* ── Praktisk ────────────────────────────────────────────── */
+  practical: {
+
+    logistics: [
+      {
+        category: "Transport",
+        title:    "Parkering, tog og elbil",
+        icon:     "🚂",
+        items: [
+          { icon: "🅿️", label: "P+R Königstein Bahnhof",          detail: "Gratis parkering hele ugen · Ingen tidsbegrænsning · Sikker" },
+          { icon: "🚂", label: "S-Bahn S1: Königstein ↔ Wehlen",  detail: "Ca. 10 min · Afgår hvert 30. min · Sachsen-Ticket gælder" },
+          { icon: "🎫", label: "Sachsen-Ticket",                   detail: "~35€ for hele gruppen (op til 5 pers.) · Hent på DB Navigator-appen" },
+          { icon: "⚡", label: "Supercharger Dresden Kesselsdorf", detail: "Bruges både på vej ned og hjem · Hurtig oplad 15–25 min" },
+        ],
+      },
+    ],
+
+    checklist: [
+      "Book alle hoteller nu (Wehlen, Hohnstein, Bad Schandau, Königstein)",
+      "Sachsen-Ticket på DB Navigator-appen",
+      "Vandtætte støvler med godt greb",
+      "Mapy.cz offline – dårligt mobilsignal i skoven",
+      "Kontanter til Gasthöfe og fæstning",
+      "Lette lag – april: 6–14°C, kan skifte",
+      "Tjek Supercharger-tilgængelighed i Tesla-appen inden afgang",
+      "Bastei dag 2: afgang senest 08:30 for at undgå turisterne",
+    ],
+
+    links: [
+      { category: "Wikipedia",  title: "Saxon Switzerland NP",   url: "https://en.wikipedia.org/wiki/Saxon_Switzerland_National_Park", urlLabel: "en.wikipedia.org"       },
+      { category: "Officiel",   title: "Turistinformation",       url: "https://www.saechsische-schweiz.de/en",                        urlLabel: "saechsische-schweiz.de" },
+      { category: "Transport",  title: "DB – tog & Sachsen-Ticket",url: "https://www.bahn.de",                                         urlLabel: "bahn.de"                },
+      { category: "Wikipedia",  title: "Basteibrücke",            url: "https://en.wikipedia.org/wiki/Bastei",                         urlLabel: "en.wikipedia.org"       },
+      { category: "Wikipedia",  title: "Schrammsteine",           url: "https://en.wikipedia.org/wiki/Schrammsteine",                  urlLabel: "en.wikipedia.org"       },
+      { category: "Wikipedia",  title: "Malerweg (116 km)",       url: "https://en.wikipedia.org/wiki/Malerweg",                       urlLabel: "en.wikipedia.org"       },
+    ],
+  },
+
+  /* ── Kort ────────────────────────────────────────────────── */
+  map: {
+    label:  "Ruteoverblik",
+    title:  "Kort — Sächsische Schweiz",
+
+    // Real GPX tracks — one per hiking day
+    gpxRoutes: [
+      { file: "routes/dag2.gpx", color: '#2d6630', label: "Etape 1 · Wehlen → Bastei → Hohnstein" },
+      { file: "routes/dag3.gpx", color: '#1a3a8a', label: "Etape 2 · Hohnstein → Schrammsteine → Bad Schandau" },
+      { file: "routes/dag4.gpx", color: '#8a3a1a', label: "Etape 3 · Bad Schandau → Kuhstall → Königstein" },
+    ],
+
+    // Drive line Dresden → Königstein (stiplet blå)
+    segments: [
+      { color: '#4a6aaa', weight: 2, dashed: true, coords: [
+        [51.050, 13.738],
+        [50.924, 14.060],
+      ]},
+    ],
+
+    waypoints: [
+      { lat: 51.050, lng: 13.738, type: 'waypoint', label: 'Dresden',              desc: 'Supercharger · Kesselsdorf' },
+      { lat: 50.924, lng: 14.060, type: 'start',    label: 'Königstein (P+R)',     desc: 'Parkering hele turen · start/slut vandring' },
+      { lat: 50.964, lng: 14.105, type: 'hotel',    label: 'Stadt Wehlen',         desc: 'Overnat dag 1 · vandrestart etape 1' },
+      { lat: 50.965, lng: 14.088, type: 'waypoint', label: 'Basteibrücke',         desc: '76 m lang sandstenskonstruktion' },
+      { lat: 50.977, lng: 14.101, type: 'hotel',    label: 'Hohnstein',            desc: 'Overnat dag 2' },
+      { lat: 50.919, lng: 14.212, type: 'waypoint', label: 'Schrammsteinaussicht', desc: '360° panorama' },
+      { lat: 50.921, lng: 14.148, type: 'hotel',    label: 'Bad Schandau',         desc: 'Overnat dag 3' },
+      { lat: 50.927, lng: 14.188, type: 'waypoint', label: 'Kuhstall',             desc: 'Naturlig sandstensklippebue' },
+    ],
+  },
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  footer: {
+    icon:     "🥾",
+    subtitle: "Sächsische Schweiz · 1.–5. april 2025",
+    detail:   "Aarhus → Stadt Wehlen → Hohnstein → Bad Schandau → Königstein → Aarhus",
+  },
+
+};
+</script>
+<script src="../_shared/renderer.js"></script>
+</body>
+</html>

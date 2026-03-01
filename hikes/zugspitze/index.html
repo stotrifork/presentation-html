@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading…</title>
+  <link rel="stylesheet" href="../_shared/theme.css">
+</head>
+<body>
+<script>
+window.TRIP = {
+
+  /* ── Meta ────────────────────────────────────────────────── */
+  title:      "Zugspitze Circuit",
+  region:     "Bavaria, Germany",
+  badge:      "🥾 4-day hut hike",
+  dateRange:  "Summer 2025",
+  difficulty: "Challenging",
+
+  // Optional: path to a cover photo (relative to this file)
+  // coverImage: "images/cover.jpg",
+
+  /* ── UI strings (English override — default is Danish) ───── */
+  ui: {
+    navOverview:  'Overview',
+    navPractical: 'Practical',
+    overviewH3:   '📅 Trip Overview',
+    beforeYouGo:  'Before you go',
+    checklist:    'Checklist',
+    resources:    'Resources',
+    usefulLinks:  'Useful links',
+    mapLoading:   'Loading map…',
+    mapHint:      'Click and drag to navigate · Zoom with + / −',
+  },
+
+  /* ── Cover stats ─────────────────────────────────────────── */
+  stats: [
+    { value: "4",      label: "Days"      },
+    { value: "~60 km", label: "Distance"  },
+    { value: "~4200 m",label: "Elevation" },
+    { value: "4",      label: "Nights"    },
+  ],
+
+  /* ── Days ────────────────────────────────────────────────── */
+  // type: "hike" | "drive" | "rest"
+  // pills: array of strings, or { text: "...", warn: true } for warning pills
+  // highlights: bullet point list
+  // accommodation: { icon, name, desc } or an array of those
+  // images: ["images/photo1.jpg", "images/photo2.jpg"]
+
+  days: [
+    {
+      id:            "day1",
+      type:          "hike",
+      date:          "Day 1 · Monday",
+      navLabel:      "Day 1",
+      overviewIcon:  "🥾",
+      overviewLabel: "Garmisch → Reintal",
+
+      title:    "Garmisch-Partenkirchen → Reintalangerhütte",
+      subtitle: "Via Partnachklamm gorge and the Reintal valley",
+      pills:    ["16 km", "+900 m", "5–6 h"],
+
+      description: "A stunning opener that eases you into the Alps through one of Germany's most dramatic gorges. The Partnachklamm cuts through 80-metre-high rock walls before opening into the wide Reintal valley — a gentle forest climb all the way to the hut.",
+
+      highlights: [
+        "Morning train from Munich to Garmisch-Partenkirchen (1h 20 min, runs hourly)",
+        "Walk through the spectacular Partnachklamm gorge (entrance fee ~€5)",
+        "Follow the broad Reintal valley — well-marked, gentle gradient through forest",
+        "Stop at Bockhütte (~1 h in) for lunch or coffee (open in season)",
+        "Arrive at Reintalangerhütte (1 370 m) — Bavaria's largest Alpine hut",
+      ],
+
+      tip: "💡 The gorge is most dramatic after rain — the waterfall volume is spectacular. Bring a waterproof layer, it gets wet inside.",
+
+      accommodation: {
+        icon: "🏔️",
+        name: "Reintalangerhütte",
+        desc: "Bavaria's largest Alpine hut — book well in advance. Dorm beds and half-board (dinner + breakfast) available.",
+      },
+
+      links: [
+        { label: "Partnachklamm",    url: "https://en.wikipedia.org/wiki/Partnach_Gorge" },
+        { label: "Reintalangerhütte",url: "https://www.reintalangerhuette.de" },
+      ],
+    },
+
+    {
+      id:            "day2",
+      type:          "hike",
+      date:          "Day 2 · Tuesday",
+      navLabel:      "Day 2",
+      overviewIcon:  "⛰️",
+      overviewLabel: "Zugspitze summit",
+
+      title:    "Reintalangerhütte → Zugspitzplatt → Wiener-Neustädter Hütte",
+      subtitle: "The crux day — summit approach via the glacier plateau",
+      pills:    ["12 km", "+1 600 m", "6–8 h", { text: "⚠ glacier terrain", warn: true }],
+
+      description: "The hardest and most dramatic day. A long, sustained climb up through the Zugspitzplatt — Germany's largest glacier — to the Austrian border ridge. Crampons may be needed in early season. Early start is essential.",
+
+      highlights: [
+        "Early start by 07:00 — long elevation gain and afternoon thunderstorm risk",
+        "Steep ascent through the Zugspitzplatt glacier plateau",
+        "Optional side-trip to the Zugspitze summit (2 962 m) — Germany's highest point (+1 h return)",
+        "Descend slightly south to the Austrian border",
+        "Arrive at Wiener-Neustädter Hütte (2 209 m) with panoramic views across the Wetterstein",
+      ],
+
+      tip: "⛰️ Crampons and ice axe may be required until mid-July. Check hut conditions before departure. Aim to be at the hut by 14:00 — afternoon storms are common.",
+
+      accommodation: {
+        icon: "🏔️",
+        name: "Wiener-Neustädter Hütte (2 209 m)",
+        desc: "Austrian Alpine Club hut — essential to pre-book. Only a few dozen beds. Half-board recommended.",
+      },
+
+      links: [
+        { label: "Zugspitze",          url: "https://en.wikipedia.org/wiki/Zugspitze" },
+        { label: "Zugspitzplatt",      url: "https://en.wikipedia.org/wiki/Zugspitzplatt" },
+      ],
+    },
+
+    {
+      id:            "day3",
+      type:          "hike",
+      date:          "Day 3 · Wednesday",
+      navLabel:      "Day 3",
+      overviewIcon:  "🦅",
+      overviewLabel: "Ridge to Coburger",
+
+      title:    "Wiener-Neustädter Hütte → Ehrwald → Coburger Hütte",
+      subtitle: "Ridge traverse across the Mieminger Plateau into Austria and back",
+      pills:    ["18 km", "+900 m / −1 100 m", "6–7 h"],
+
+      description: "A varied day that drops into the charming Austrian village of Ehrwald before climbing back up to the Coburger Hütte perched above the turquoise Seebensee lake. One of the most scenic sections of the circuit.",
+
+      highlights: [
+        "Descend towards Ehrwald (Austria) via the Ehrwalder Alm — classic meadow scenery",
+        "Optional: cable car from Ehrwald up to Zugspitze if you skipped the summit on Day 2",
+        "Traverse north along the ridge with sweeping views over Lermoos and the Zugspitz massif",
+        "Climb to the Coburger Hütte (1 917 m), perched above the turquoise Seebensee",
+        "Afternoon swim in the Seebensee — a stunning high Alpine lake (if weather allows)",
+      ],
+
+      tip: "🏊 The Seebensee is one of the finest wild swim spots in the Bavarian Alps. Cold but crystal clear — well worth it on a warm day.",
+
+      accommodation: {
+        icon: "🏡",
+        name: "Coburger Hütte (1 917 m)",
+        desc: "DAV hut — dorm beds and private rooms. Half-board includes dinner. Spectacular lake views from the terrace.",
+      },
+
+      links: [
+        { label: "Seebensee", url: "https://en.wikipedia.org/wiki/Seebensee" },
+        { label: "Ehrwald",   url: "https://en.wikipedia.org/wiki/Ehrwald" },
+      ],
+    },
+
+    {
+      id:            "day4",
+      type:          "hike",
+      date:          "Day 4 · Thursday",
+      navLabel:      "Day 4",
+      overviewIcon:  "🏁",
+      overviewLabel: "Return to Garmisch",
+
+      title:    "Coburger Hütte → Eibsee → Garmisch-Partenkirchen",
+      subtitle: "Descent via the jewel-like Eibsee lake back to the start",
+      pills:    ["14 km", "−1 900 m", "4–5 h"],
+
+      description: "A triumphant finish past the turquoise Eibsee lake at the foot of the Zugspitze before returning to Garmisch. Mostly downhill on good trails.",
+
+      highlights: [
+        "Morning descent from Coburger Hütte back towards the German side",
+        "Pass the Eibsee — a lake of extraordinary turquoise colour at the foot of the Zugspitze",
+        "Option A: walk the full trail down to Grainau, then train to Garmisch (~4 h)",
+        "Option B: take the Eibsee gondola partway and walk the final stretch (~2.5 h)",
+        "Celebrate in Garmisch with a cold Weissbier and Obatzda at any Biergarten",
+      ],
+
+      tip: "🍺 The Zugspitze Biergarten in Garmisch has great views back up to where you've been. Well-earned.",
+
+      info: "🚂 Frequent trains from Garmisch-Partenkirchen to Munich — 1h 20 min, last train around 22:00.",
+
+      links: [
+        { label: "Eibsee",                  url: "https://en.wikipedia.org/wiki/Eibsee" },
+        { label: "Garmisch-Partenkirchen",  url: "https://en.wikipedia.org/wiki/Garmisch-Partenkirchen" },
+      ],
+    },
+  ],
+
+  /* ── Practical ───────────────────────────────────────────── */
+  practical: {
+
+    logistics: [
+      {
+        category: "Transport",
+        title:    "Getting there & around",
+        icon:     "🚂",
+        items: [
+          { icon: "🚂", label: "Munich → Garmisch-Partenkirchen", detail: "1h 20 min · trains every 60 min · Bayern-Ticket valid" },
+          { icon: "🚌", label: "Garmisch to trailhead",           detail: "Walk ~20 min from station to Partnachklamm entrance" },
+          { icon: "🚡", label: "Zugspitze cable car (escape)",    detail: "Eibsee Seilbahn: Eibsee → Zugspitze — useful bailout option" },
+          { icon: "🎫", label: "Bayern-Ticket",                   detail: "~€30 for up to 5 people — valid on all regional trains and buses in Bavaria" },
+        ],
+      },
+    ],
+
+    checklist: [
+      "Book all huts well in advance — July/August fills up weeks ahead",
+      "Crampons + ice axe for Zugspitzplatt (check hut for current conditions)",
+      "Sturdy waterproof boots with ankle support — no trail runners",
+      "Download offline maps (Mapy.cz or Komoot) — no mobile signal in valley",
+      "Cash for huts — most don't accept cards",
+      "Start Day 2 by 07:00 — long day with afternoon storm risk",
+      "Travel insurance with mountain rescue coverage",
+      "Lightweight fleece and windproof layer — even in summer",
+    ],
+
+    links: [
+      { category: "Official",   title: "Zugspitze Info",        url: "https://www.zugspitze.de/en",              urlLabel: "zugspitze.de"             },
+      { category: "Maps",       title: "Komoot Route",          url: "https://www.komoot.com",                   urlLabel: "komoot.com"               },
+      { category: "Hut",        title: "Reintalangerhütte",     url: "https://www.reintalangerhuette.de",        urlLabel: "reintalangerhuette.de"    },
+      { category: "Transport",  title: "Bayern-Ticket — DB",    url: "https://www.bahn.de",                      urlLabel: "bahn.de"                  },
+      { category: "Conditions", title: "DAV Hut Conditions",    url: "https://www.alpenvereinshuetten.de",       urlLabel: "alpenvereinshuetten.de"   },
+      { category: "Wikipedia",  title: "Zugspitze",             url: "https://en.wikipedia.org/wiki/Zugspitze", urlLabel: "en.wikipedia.org"         },
+    ],
+  },
+
+  /* ── Kort ────────────────────────────────────────────────── */
+  // label/title: overskrift over kortet
+  // segments: farvede linjer pr. etape  — color, weight, dashed
+  // waypoints: markører — type: "start" | "end" | "hut" | "hotel" | "waypoint"
+  map: {
+    label:  "Ruteoverblik",
+    title:  "Kort",
+    center: [47.44, 10.99],
+    zoom:   11,
+
+    segments: [
+      // Dag 1 — Garmisch → Reintalangerhütte (mørkegrøn)
+      { color: '#2d5a30', weight: 3, coords: [
+        [47.492, 11.096],   // Garmisch-Partenkirchen
+        [47.470, 11.104],   // Partnachklamm
+        [47.432, 11.065],   // Bockhütte
+        [47.389, 11.025],   // Reintalangerhütte
+      ]},
+      // Dag 2 — Reintalangerhütte → Zugspitze → Wiener-Neustädter Hütte
+      { color: '#1a3a1e', weight: 3, coords: [
+        [47.389, 11.025],   // Reintalangerhütte
+        [47.408, 11.000],   // Zugspitzplatt
+        [47.421, 10.985],   // Zugspitze summit
+        [47.413, 10.976],   // Wiener-Neustädter Hütte
+      ]},
+      // Dag 3 — Wiener-Neustädter → Ehrwald → Coburger Hütte
+      { color: '#3d6040', weight: 3, coords: [
+        [47.413, 10.976],   // Wiener-Neustädter Hütte
+        [47.399, 10.907],   // Ehrwald
+        [47.427, 10.874],   // Coburger Hütte / Seebensee
+      ]},
+      // Dag 4 — Coburger Hütte → Eibsee → Garmisch
+      { color: '#4a7a4a', weight: 3, coords: [
+        [47.427, 10.874],   // Coburger Hütte
+        [47.456, 10.994],   // Eibsee
+        [47.492, 11.096],   // Garmisch-Partenkirchen
+      ]},
+    ],
+
+    waypoints: [
+      { lat: 47.492, lng: 11.096, type: 'start',   label: 'Garmisch-Partenkirchen', desc: 'Start/slut' },
+      { lat: 47.470, lng: 11.104, type: 'waypoint', label: 'Partnachklamm',          desc: 'Dag 1 – kløften' },
+      { lat: 47.389, lng: 11.025, type: 'hut',      label: 'Reintalangerhütte',      desc: 'Nat dag 1 · 1 370 m' },
+      { lat: 47.421, lng: 10.985, type: 'waypoint', label: 'Zugspitze',              desc: '2 962 m – Tysklands højeste punkt' },
+      { lat: 47.413, lng: 10.976, type: 'hut',      label: 'Wiener-Neustädter Hütte',desc: 'Nat dag 2 · 2 209 m' },
+      { lat: 47.399, lng: 10.907, type: 'waypoint', label: 'Ehrwald',                desc: 'Dag 3 – østrigsk landsby' },
+      { lat: 47.427, lng: 10.874, type: 'hut',      label: 'Coburger Hütte',         desc: 'Nat dag 3 · 1 917 m · Seebensee' },
+      { lat: 47.456, lng: 10.994, type: 'waypoint', label: 'Eibsee',                 desc: 'Dag 4 – turquoise bjergsø' },
+    ],
+  },
+
+  /* ── Footer ──────────────────────────────────────────────── */
+  footer: {
+    icon:     "🥾",
+    subtitle: "Zugspitze Circuit · Bavaria · Summer 2025",
+    detail:   "Garmisch → Reintalangerhütte → Wiener-Neustädter Hütte → Coburger Hütte → Garmisch",
+  },
+
+};
+</script>
+<script src="../_shared/renderer.js"></script>
+</body>
+</html>
